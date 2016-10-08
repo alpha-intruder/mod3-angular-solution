@@ -25,7 +25,7 @@ Initially, the user should just see a screen with the textbox and the "Narrow It
 
 Once your app goes through all the items, it should display the `found` list of items. Each item in the list should show the name of the menu item, its short_name, and the description. You can display the items in a simple unordered list, with each piece of information separated by a comma. OR be fancier and use some sort of a grid. Either way is fine. We are not concentrating on style in this class.
 
-You should also provide a "Don't want this one!" button next to each item in the list to give the user the ability to remove an item from that list.
+    You should also provide a "Don't want this one!" button next to each item in the list to give the user the ability to remove an item from that list.
 
 If nothing is found as a result of the search OR if the user leaves the textbox empty and clicks the "Narrow It Down For Me!" button, you should simply display the message "Nothing found".
 
@@ -54,7 +54,7 @@ Here is what you will need to do to complete the assignment:
 #### Steps for Implementing Assignment Requirements
 1. Declare `ng-app` either on the `html` or the `body` element. Name your app `NarrowItDownApp`.
 2. Create `app.js` in your project and declare an Angular module to match your `ng-app` declaration.
-3. Declare and create a NarrowItDownController (with controller as syntax) that will wrap your search textbox and button as well as the list of found items.
+3. Declare and create a NarrowItDownController (with controller as syntax) that will wrap your search textbox and button as well as the list of found items.  
 4. Declare and create MenuSearchService. The service should have the following method: getMatchedMenuItems(searchTerm). That method will be responsible for reaching out to the server (using the $http service) to retrieve the list of all the menu items. Once it gets all the menu items, it should loop through them to pick out the ones whose description matches the searchTerm. Once a list of found items is compiled, it should return that list (wrapped in a promise). Remember that the `then` function itself returns a promise. Your method would roughly look like this:
   ```javascript
   return $http(...).then(function (result) {
